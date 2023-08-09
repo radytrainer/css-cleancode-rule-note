@@ -121,6 +121,42 @@ color: #4eecde;
 - Camel case: `thisIsMyExample`
 ```js
 // Javascript
-let countStudentName = 0;
+let studentName = "";
 let hasStudent = false;
+let age = 13;
+```
+```php
+// PHP
+$studentName = ""
+$isFoundA = False
+$age = 13
+```
+```java
+// Java
+string studentName = "";
+boolean hasStudent = false;
+int age = 13;
+```
+- Snake case: `this_is_my_example`
+```python
+# Python
+student_name = ""
+has_student = false
+age = 13
+```
+- Kebab case: `this-is-my-example`
+```html
+<!-- HTML -->
+<div class="card">
+    <div class="card-header"></div>
+    <div class="card-body"></div>
+    <div class="card-footer"></div>
+</div>
+```
+```css
+/* CSS */
+.card {...}
+.card-header {...}
+.card-body {...}
+.card-footer {...}
 ```

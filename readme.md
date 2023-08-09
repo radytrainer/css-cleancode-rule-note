@@ -1,8 +1,64 @@
 ## HTML/CSS CLEAN CODE RULE
 
-### #1. Keep it DRY (`Don't Repeat Yourself`)
-Remove the duplication of code using `CSS Rule` and `SASS Rule`
+### HTML
 
+#### A. Meta tags
+```html
+<!-- Use for support any language on your website -->
+<head>
+  <meta charset="UTF-8">
+</head>
+```
+```html
+<!-- Use for responsive on your website -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+```
+```html
+<!-- Use for SEO on your website -->
+<head>
+  <meta name="description" content="Free tutorials">
+  <meta name="keywords" content="HTML, CSS, Clean code">
+  <meta name="author" content="Rady Y">
+</head>
+```
+
+#### B. Capitalization (`Use only lowercase`)
+```html
+<!-- Not recommended -->
+<INPUT TYPE="TEXT" PLACEHOLDER="ENTER">
+```
+```html
+<!-- Recommended -->
+<input type="text" placeholder="Enter">
+```
+```css
+/* Not recommended */
+color: #4EECDE;
+```
+```css
+/* Recommended */
+color: #4eecde;
+```
+#### C. Class name
+```html
+<!-- Not recommended -->
+<div class="rady">
+    <div class="ww-left"></div>
+    <div class="my33-center"></div>
+    <div class="my-right"></div>
+</div>
+```
+```html
+<!-- Recommended -->
+<div class="container">
+    <div class="sidebar-left"></div>
+    <div class="main-content"></div>
+    <div class="sidebar-right"></div>
+</div>
+```
+### CSS
 
 #### A. Use `CSS Universal selector`
 ```css
@@ -132,41 +188,7 @@ main,
 footer,
 header { ... }
 ```
-### HTML
-#### 1. Capitalization (`Use only lowercase`)
-```html
-<!-- Not recommended -->
-<INPUT TYPE="TEXT" PLACEHOLDER="ENTER">
-```
-```html
-<!-- Recommended -->
-<input type="text" placeholder="Enter">
-```
-```css
-/* Not recommended */
-color: #4EECDE;
-```
-```css
-/* Recommended */
-color: #4eecde;
-```
-#### 2. Class name
-```html
-<!-- Not recommended -->
-<div class="rady">
-    <div class="ww-left"></div>
-    <div class="my33-center"></div>
-    <div class="my-right"></div>
-</div>
-```
-```html
-<!-- Recommended -->
-<div class="container">
-    <div class="sidebar-left"></div>
-    <div class="main-content"></div>
-    <div class="sidebar-right"></div>
-</div>
-```
+
 
 ### Naming convention
 - Camel case: `thisIsMyExample`

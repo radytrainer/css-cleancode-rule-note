@@ -4,7 +4,58 @@
 Remove the duplication of code using `CSS Rule` and `SASS Rule`
 
 #### CSS Rule
-- `Grouping`
+- Use `CSS Universal selector`
+```css
+/* Not recommend */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+ul a {
+    text-decoration: none;
+    color: #fff;
+}
+button {
+    border:none;
+    background-color: red;
+    cursor: pointer;
+    width: 100%;
+}
+h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: "Sans-Serif";
+    text-align: center;
+}
+```
+```css
+/* Recommend */
+* {
+    margin: 0;
+    padding: 0;
+    border:none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Sans-Serif";
+}
+ul {
+   background-color:blue;
+}
+ul a {
+    color: #fff;
+}
+button {
+    background-color: red;
+    cursor: pointer;
+    width: 100%;
+}
+h1, p {
+   text-align: center;
+}
+```
+- Use `Grouping`
 
 ```css
 /* Not recommended */

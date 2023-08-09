@@ -6,8 +6,8 @@ Remove the duplication of code using `CSS Rule` and `SASS Rule`
 #### CSS Rule
 - `Grouping`
 
-Button duplication of code
 ```css
+/* Not recommended */
 .btn-primary {
     cursor: pointer;
     background: blue;
@@ -37,8 +37,9 @@ Button duplication of code
     color: #fff;
 }
 ```
-Clean code by `grouping`
+
 ```css
+/* Recommended */
 button {
     cursor: pointer;
     border:none;
@@ -98,4 +99,28 @@ color: #4EECDE;
 /* Recommended */
 color: #4eecde;
 ```
-#### 2. Use meta tags
+#### 2. Class name
+```html
+<!-- Not recommended -->
+<div class="rady">
+    <div class="ww-left"></div>
+    <div class="my33-center"></div>
+    <div class="my-right"></div>
+</div>
+```
+```html
+<!-- Recommended -->
+<div class="container">
+    <div class="sidebar-left"></div>
+    <div class="main-content"></div>
+    <div class="sidebar-right"></div>
+</div>
+```
+
+### Naming convention
+- Camel case: `thisIsMyExample`
+```js
+// Javascript
+let countStudentName = 0;
+let hasStudent = false;
+```

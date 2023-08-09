@@ -211,6 +211,7 @@ header { ... }
 ```
 #### A. Varaibles
 Variables are a way to store information that you can re-use later.
+
 ```scss
 // How to use variables -----------------------
 $myFont: Helvetica, sans-serif;
@@ -228,6 +229,7 @@ body {
   width: $myWidth;
 }
 ```
+
 ```css
 /* CSS OUTPUT -----------------------------------*/
 body {

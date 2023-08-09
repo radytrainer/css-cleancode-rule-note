@@ -189,17 +189,177 @@ footer,
 header { ... }
 ```
 ### SASS
-#### A. Varaibles
 
+#### Setup VSCode extension for SASS
+- Extension: [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass#review-details)
+- Configuration: `setting > Edit in settings.json`
+- Videos tutorials: [Link Video](https://www.youtube.com/watch?v=cpbN0YAW44g&t=183s)
+```json
+// settings.json
+"liveSassCompile.settings.formats": [
+    {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/css"
+    },
+    {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        "savePath": "/css"
+    }
+]
+```
+#### A. Varaibles
+Variables are a way to store information that you can re-use later.
+```scss
+// How to use variables -----------------------
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}
+```
+```css
+/* CSS OUTPUT -----------------------------------*/
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: red;
+}
+
+#container {
+  width: 680px;
+}
+```
 #### B. Nesting
 
-#### C. @import
+```scss
+// Nesting --------------------------------------
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+```
+```css
+/* CSS OUTPUT ------------------------------------- */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+```
+```scss
+// Nested Properties --------------------------------
+font: {
+  family: Helvetica, sans-serif;
+  size: 18px;
+  weight: bold;
+}
 
+text: {
+  align: center;
+  transform: lowercase;
+  overflow: hidden;
+}
+```
+```css
+/* CSS OUTPUT ------------------------------------- */
+font-family: Helvetica, sans-serif;
+font-size: 18px;
+font-weight: bold;
+
+text-align: center;
+text-transform: lowercase;
+text-overflow: hidden;
+```
+
+#### C. @import
+Sass keeps the CSS code DRY (`Don't Repeat Yourself`). One way to write DRY code is to keep related code in separate files.
+```scss
+// _colors.scss
+$primaryColor: blue;
+$secondaryColor:gray;
+$warningColor:orange;
+$dangerColor: red;
+```
+```scss
+// main.scss
+@import "colors";
+
+.container {
+    background: $primaryColor;
+}
+.card {
+    background: $secondColor;
+    color: $dangerColor;
+}
+```
 
 #### D. @mixin - @include
+```scss
+/* Define mixin with two arguments */
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
 
+.myArticle {
+  @include bordered(blue, 1px);  // Call mixin with two values
+}
+
+.myNotes {
+  @include bordered(red, 2px); // Call mixin with two values
+}
+```
 
 #### E. @extend
+```scss
+.button-basic  {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report  {
+  @extend .button-basic;
+  background-color: red;
+}
+
+.button-submit  {
+  @extend .button-basic;
+  background-color: green;
+  color: white;
+}
+```
 
 ### Naming convention
 #### A. Camel case: `thisIsMyExample`
@@ -212,7 +372,7 @@ let age = 13;
 ```php
 // PHP
 $studentName = ""
-$isFoundA = False
+$isFoundA = false
 $age = 13
 ```
 ```java

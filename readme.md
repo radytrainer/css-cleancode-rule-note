@@ -188,10 +188,21 @@ main,
 footer,
 header { ... }
 ```
+### SASS
+#### A. Varaibles
 
+#### B. Nesting
+
+#### C. @import
+
+
+#### D. @mixin - @include
+
+
+#### E. @extend
 
 ### Naming convention
-- Camel case: `thisIsMyExample`
+#### A. Camel case: `thisIsMyExample`
 ```js
 // Javascript
 let studentName = "";
@@ -210,14 +221,14 @@ string studentName = "";
 boolean hasStudent = false;
 int age = 13;
 ```
-- Snake case: `this_is_my_example`
+#### B. Snake case: `this_is_my_example`
 ```python
 # Python
 student_name = ""
 has_student = false
 age = 13
 ```
-- Kebab case: `this-is-my-example`
+#### C. Kebab case: `this-is-my-example`
 
 ```html
 <!-- HTML -->

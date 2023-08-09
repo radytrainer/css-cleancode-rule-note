@@ -3,8 +3,8 @@
 ### #1. Keep it DRY (`Don't Repeat Yourself`)
 Remove the duplication of code using `CSS Rule` and `SASS Rule`
 
-#### CSS Rule
-- Use `CSS Universal selector`
+
+#### A. Use `CSS Universal selector`
 ```css
 /* Not recommend */
 ul {
@@ -55,7 +55,7 @@ h1, p {
    text-align: center;
 }
 ```
-- Use `Grouping`
+#### B. Use `Grouping`
 
 ```css
 /* Not recommended */
@@ -110,7 +110,7 @@ button {
     background: orange;
 }
 ```
-#### A. Long selector
+#### C. Long selector
 ```css
 /* Not recommended */
 body .container .card li { .... }
@@ -119,7 +119,7 @@ body .container .card li { .... }
 /* Recommended */
 .card li { .... }
 ```
-#### B. Group selector
+#### D. Group selector
 ```css
 /* Not recommended */
 .container, .card , main, footer, header { ... }
@@ -196,6 +196,7 @@ has_student = false
 age = 13
 ```
 - Kebab case: `this-is-my-example`
+
 ```html
 <!-- HTML -->
 <div class="card">
@@ -204,6 +205,7 @@ age = 13
     <div class="card-footer"></div>
 </div>
 ```
+
 ```css
 /* CSS */
 .card {...}
